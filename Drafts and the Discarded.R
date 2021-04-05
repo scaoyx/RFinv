@@ -1,13 +1,3 @@
-# Sarah, what you'll end up doing will be similar to what I have on the Github link. You'll even up doing something like this:
-# 1. Create a stack of your environmental rasters.
-# 2. Extracting the environmental values from your rasters at the locations of your native plants.
-# 3. Extracting the environmental values from your rasters at the locations of your invasive plants.
-# 4. Run random forests models for both your invasive and native plant species.
-# 5. Create partial response plots for your plant data so you can see how the likelihood of observing an invasive or native plant species depends on your different environmental values.
-
-
-
-
 
 # set up a variable in each dataframe to designate 
 # whether or not we're dealing with presence locations 
@@ -48,11 +38,11 @@ native_abs_Subset <- native_abs_Subset[,c(ncol(native_abs_Subset),1:ncol(native_
 library(randomForest)
 library(raster)
 library(sp)
-# The following object is masked from ¡®package:dplyr¡¯:
+# The following object is masked from Â¡Â®package:dplyrÂ¡Â¯:
 #   
 #   combine
 # 
-# The following object is masked from ¡®package:ggplot2¡¯:
+# The following object is masked from Â¡Â®package:ggplot2Â¡Â¯:
 #   
 #   margin
 
@@ -182,8 +172,8 @@ write.table(invasive_RFImportanceTotal,paste(invasive_RFImportanceTotal,"invasiv
 
 
 # Calculate Yule's Q (used in the second randomForest in the coastlight example)
-#Yule¡¯s Q is just the 2¡Á2 version of the gamma coefficient
-#which tests how closely two pairs of data points ¡°match¡± and (for an association between points) 
+#YuleÂ¡Â¯s Q is just the 2Â¡Ã2 version of the gamma coefficient
+#which tests how closely two pairs of data points Â¡Â°matchÂ¡Â± and (for an association between points) 
 #the strength of association
 #Yule's Q is used when you have two dichotomous variables (e.g. responses that are yes/no)
 #formula see https://www.statisticshowto.com/gamma-coefficient-goodman-kruskal/#YulesQ
